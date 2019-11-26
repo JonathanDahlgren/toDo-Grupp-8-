@@ -1,2 +1,2 @@
 # toDo-Grupp-8-
-Jonathan, Elin, Victor
+Jonathan, Elin, Viktor
