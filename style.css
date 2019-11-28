@@ -7,17 +7,15 @@ padding: 0;
 main {
 display: grid;
 grid-template-columns: repeat(9, 1fr);
-grid-template-rows: repeat(7, 1fr);
+grid-template-rows: repeat(6, 1fr);
 grid-template-areas: 
 "date date month month month month month month month"
-"date date month month month month month month month"
+/*"date date month month month month month month month"*/
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
-
-
 
 ;
 }
@@ -44,4 +42,26 @@ grid-area: month;
     background-color: rgb(61, 44, 238);
     grid-area: calendar;
 
-    }
+}
+
+.calenderGrid {
+    height:100vh;
+    background: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat (5, 1fr); 
+}
+
+.dayOfTheWeek{
+    display:flex;
+    background: red;
+    justify-content: space-around;
+}
+
+.calenderBox{
+    display:flex;
+    justify-content: flex-end;
+    margin: 1rem 1rem;
+    border: 1px solid black;
+}
+
