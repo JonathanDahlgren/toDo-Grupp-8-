@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo Calendar</title>
-    <script src="script.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <main>
 
+<!--Main är vår grid-->
+<main>
+
+<!--Visar pågånde månad-->
     <div class="month"> 
         <h1 id="getMonth"></h1> 
     </div>
 
-
-<div class="calendar">
+<!--veckodagar-->
+    <div class="calendar">
             <div class="dayOfTheWeek">
                     <p>Söndag</p>
                     <p>Måndag</p>
@@ -28,21 +31,31 @@
                     <p>Lördag</p>
             </div>
 
+
             <div class="calenderGrid">
 
             </div>
-</div>
+</div>      
+=======
+    
+<!--Kalenderns grid-->
+        <div class="calenderGrid"></div>
 
-    <div class="date">
-        <p id="getDate"></p>
-        <p id="day"></p>
-        <div id="time"></div>
     </div>
+<!--Datum och veckodag-->
+    
+      
+            <div class="date">
+                    <p id="getDate"></p>
+                    <p id="day"></p>
+                    <div id="time"></div>
+            </div>
+       
+<!--Todo-sektionen-->
+    <div class="toDo">Todo List</div>
 
-<div class="toDo">Todo List</div>
 
-
-    </main>
+</main>
     
 </body>
 </html>

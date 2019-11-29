@@ -43,6 +43,7 @@ var d = new Date()
 
 }
 
+
 function time(){
     let currentTime = new Date();
     
@@ -52,4 +53,5 @@ function time(){
     
     document.getElementById("time").innerText = time;
     
-   }
+}
+
