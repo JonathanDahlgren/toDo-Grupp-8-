@@ -4,8 +4,6 @@ window.onload = loadPage
 function loadPage(){
     showCalender()
     showDate()
-    time()
-    setInterval(time, 1000)
 }
 
 function showCalender(){
@@ -42,3 +40,4 @@ var d = new Date()
         document.getElementById("day").innerHTML = days[d.getDay()]
 
 }
+
