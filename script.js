@@ -3,6 +3,7 @@ window.onload = loadPage
 
 function loadPage(){
     showCalender()
+    showDate()
 }
 
 function showCalender(){
@@ -23,4 +24,19 @@ function createNewDivs(day){
     newDay.innerHTML += (day)
     newDay.className = 'calenderBox'
     return newDay
+}
+
+function showDate(){
+
+var d = new Date()
+
+        var months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+        document.getElementById("getMonth").innerHTML = months[d.getMonth()]
+ 
+        var d = new Date()
+        document.getElementById("getDate").innerHTML = d.getDate()
+        var d = new Date()
+        var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        document.getElementById("day").innerHTML = days[d.getDay()]
+
 }
