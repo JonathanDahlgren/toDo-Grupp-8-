@@ -4,7 +4,10 @@ window.onload = loadPage
 function loadPage(){
     showCalender()
     showDate()
+    time()
+    setInterval(time, 1000)
     addTodoToKalender()
+
 }
 
 let todoList = []
@@ -68,3 +71,13 @@ var d = new Date()
 
 }
 
+function time(){
+    let currentTime = new Date();
+    
+    let time = currentTime.getHours() + " : "
+    + currentTime.getMinutes() + " : "
+    + currentTime.getSeconds()
+    
+    document.getElementById("time").innerText = time;
+    
+}
