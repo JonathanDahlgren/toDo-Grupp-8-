@@ -6,10 +6,13 @@ function loadPage(){
     showDate()
     time()
     setInterval(time, 1000)
-    addTodoToKalender()
+    // addTodoToKalender()
+    
 
 }
 
+
+// ------- TODO --------- // 
 let todoList = []
 
 /**
@@ -20,7 +23,41 @@ let todo = {
     text: "STÄÄÄÄDA"
 }
 
-todoList.push(todo)
+// Add ToDo w/ Enter
+document.onkeydown = function () {
+    if (window.event.keyCode == '13') {
+        newToDoItem();
+    }
+}
+
+
+// todoList.push(todo)
+
+//Create list item
+let ul = document.createElement('ul');
+
+// Input
+input = document.getElementById('input').value;
+
+// Add todo
+function newToDoItem() {
+
+
+todoList.push(input.value);
+console.log(input.value);
+
+let ul = document.getElementById('list');
+let li = document.createElement('li');
+li.appendChild(document.createTextNode(input.value));
+ul.appendChild(li);
+
+
+
+
+
+
+input.value = '';
+}
 
 
 function showCalender(){
