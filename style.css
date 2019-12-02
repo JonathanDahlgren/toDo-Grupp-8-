@@ -16,7 +16,6 @@ grid-template-areas:
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
 "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
-
 ;
 }
 
@@ -44,8 +43,6 @@ font-size: 2rem;
 margin-right: 1rem;
 }
 
-
-
 .toDo {
 grid-area: toDo;
 border-bottom: 1px solid black;
@@ -56,12 +53,11 @@ border-top: 1px solid black;
 
 .toDo-container {
     grid-area: toDo;
- 
     display: flex;
     flex-grow: 1;
     flex-direction: column;
  
-    }
+}
  
 .toDo-list {
     margin: 10px; 
@@ -69,9 +65,8 @@ border-top: 1px solid black;
  
 .toDo-list>ul>li {
     border: 1px solid black;
-    list-style-type: none    ;
+    list-style-type: none;
     margin: 5px;
- 
     text-align: center;
 }
  
@@ -88,8 +83,6 @@ border-top: 1px solid black;
 .toDo-add>button {
     text-align: center;
     width: 20%;
- 
- 
 }
 
 .calendar {
@@ -118,6 +111,7 @@ border: 2px solid black;
 
 #time{
 font-size: 1.5rem;
+
 }
 
 

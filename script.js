@@ -7,7 +7,6 @@ function loadPage(){
     time()
     setInterval(time, 1000)
     addTodoToKalender()
-
 }
 
 let todoList = []
