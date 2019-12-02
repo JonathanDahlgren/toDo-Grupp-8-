@@ -23,7 +23,7 @@ grid-template-areas:
 grid-area: month;
 justify-content: left;
 display: flex;
-font-size: 2.5rem;
+font-size: 2rem;
 margin-top: 2rem;
 margin-left: 1rem;
 }
@@ -90,10 +90,9 @@ grid-area: calendar;
 }
 
 .calenderGrid {
-height:100vh;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: repeat (5, 1fr); 
+grid-template-rows: 7.5rem 7.5rem 7.5rem 7.5rem 7.5rem;
 }
 
 .dayOfTheWeek{
