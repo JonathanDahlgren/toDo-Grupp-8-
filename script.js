@@ -4,15 +4,40 @@ window.onload = loadPage
 function loadPage(){
     showCalender()
     showDate()
+    time()
     setInterval(time, 1000)
+    addTodoToKalender()
+
 }
+
+let todoList = []
+
+/**
+ * Detta bör läggas i en funktion. 
+ */
+let todo = {
+    date: 4,
+    text: "STÄÄÄÄDA"
+}
+
+todoList.push(todo)
+
 
 function showCalender(){
 
     let daysOfCalender = new Array(31)
 
-    for(let i = 0; i < daysOfCalender.length; i++){    
-        let calenderBox = createNewDivs(i+1)
+    for(let i = 1; i <= daysOfCalender.length; i++){ 
+        let todoCounter = 0
+        todoList.forEach((todo) => {
+            if(todo.date == i) {
+                todoCounter++
+            }
+        })
+
+        console.log(todoCounter)
+        
+        let calenderBox = createNewDivs(i, todoCounter)
         let calenderGrid = document.querySelector('.calenderGrid')
         console.log(calenderGrid)
         calenderGrid.appendChild(calenderBox)
@@ -20,9 +45,13 @@ function showCalender(){
     }
 }
 
-function createNewDivs(day){
+function createNewDivs(day, todosAmount){
     let newDay = document.createElement('div')
-    newDay.innerHTML += (day)
+    if(todosAmount != 0) {
+        newDay.innerHTML = day + " " + todosAmount
+    } else {
+        newDay.innerHTML = day
+    }
     newDay.className = 'calenderBox'
     return newDay
 }
