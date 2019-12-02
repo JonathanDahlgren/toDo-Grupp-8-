@@ -4,6 +4,7 @@ window.onload = loadPage
 function loadPage(){
     showCalender()
     showDate()
+    setInterval(time, 1000)
 }
 
 function showCalender(){
@@ -41,3 +42,13 @@ var d = new Date()
 
 }
 
+function time(){
+    let currentTime = new Date();
+    
+    let time = currentTime.getHours() + " : "
+    + currentTime.getMinutes() + " : "
+    + currentTime.getSeconds()
+    
+    document.getElementById("time").innerText = time;
+    
+}
