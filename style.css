@@ -4,7 +4,9 @@ padding: 0;
 font-family: 'Alatsi', sans-serif;
 }
 
+
 main {
+height: 100vh;
 background-image: linear-gradient(to right bottom, #7ba6ca, #4f82b8, #285ea4, #09398c, #05116f);
 display: grid;
 grid-template-columns: repeat(9, 1fr);
@@ -56,11 +58,10 @@ border-top: 1px solid black;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
- 
 }
  
 .toDo-list {
-    margin: 10px; 
+   margin: 10px;
 }
  
 .toDo-list>ul>li {
@@ -92,7 +93,7 @@ grid-area: calendar;
 .calenderGrid {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 7.5rem 7.5rem 7.5rem 7.5rem 7.5rem;
+grid-template-rows: repeat(5, 16vh);
 }
 
 .dayOfTheWeek{
