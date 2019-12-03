@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,70 +8,77 @@
     <title>Todo Calendar</title>
     <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="mobil.css" rel="stylesheet">
+
     <script src="script.js"></script>
+    <script src="todo.js"></script>
+    <script src="today.js"></script>
+    <script src="calendar.js"></script>
+
     <script src="https://kit.fontawesome.com/b92629009e.js" crossorigin="anonymous"></script>
 
-    <link href="mobil.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!--Main är vår grid-->
-<main>
+    <!--Main är vår grid-->
+    <main>
 
-<!--Visar pågånde månad-->
-    <div class="month"> 
-        <h1 id="getMonth"></h1> 
-    </div>
+        <!--Visar pågånde månad-->
+        <div class="month">
+            <h1 id="getMonth"></h1>
+        </div>
 
-<!--veckodagar-->
-    <div class="calendar">
+        <!--veckodagar-->
+        <div class="calendar">
             <div class="dayOfTheWeek">
-                    <p>Söndag</p>
-                    <p>Måndag</p>
-                    <p>Tisdag</p>
-                    <p>Onsdag</p>
-                    <p>Torsdag</p>
-                    <p>Fredag</p>
-                    <p>Lördag</p>
+                <p>Söndag</p>
+                <p>Måndag</p>
+                <p>Tisdag</p>
+                <p>Onsdag</p>
+                <p>Torsdag</p>
+                <p>Fredag</p>
+                <p>Lördag</p>
             </div>
-    
-<!--Kalenderns grid-->
-        <div class="calenderGrid"></div>
-    </div>
-<!--Datum och veckodag-->
-    
-      
-            <div class="date">
-                    <p id="getDate"></p>
-                    <p id="day"></p>
-                    <div id="time"></div>
-            </div>
-       
-<!--Todo-sektionen-->
-<div class="toDo-container">
-    <div class="toDo-list">
-            <h1>Todo List</h1>
 
-        <ul id="list">
-            <li>ToDo Ett
-                <i onclick="removeToDoItem()"class="fa fa-times" aria-hidden="true"></i>
-            </li>
-            <!-- <li>ToDo Två</li>
+            <!--Kalenderns grid-->
+            <div class="calenderGrid"></div>
+        </div>
+        <!--Datum och veckodag-->
+
+
+        <div class="date">
+            <p id="getDate"></p>
+            <p id="day"></p>
+            <div id="time"></div>
+        </div>
+
+        <!--Todo-sektionen-->
+        <div class="toDo-container">
+            <div class="toDo-list">
+                <h1>Todo List</h1>
+
+                <ul id="list">
+                    <li>ToDo Ett
+                        <i onclick="removeToDoItem()" class="fa fa-times" aria-hidden="true"></i>
+                    </li>
+                    <!-- <li>ToDo Två</li>
             <li>ToDo Tre</li>
             <li>ToDo Fyra</li>  -->
 
-        </ul>
-    </div>
-    <div class="toDo-add">
-        <input type="text" id="input" placeholder="Add ToDo">
-        <button onclick="newToDoItem()" class="addBtn">+</button>
-    </div>
+                </ul>
+            </div>
+            <div class="toDo-add">
+                <input type="text" id="input" placeholder="Add ToDo">
+                <button onclick="newToDoItem()" class="addBtn">+</button>
+            </div>
 
 
-</div>
+        </div>
 
 
-</main>
-    
+    </main>
+
 </body>
+
 </html>
