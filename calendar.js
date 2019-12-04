@@ -1,22 +1,23 @@
 
 
 function showCalender() {
-
+    let calenderGrid = document.querySelector('.calenderGrid')
+    calenderGrid.innerHTML = ""
     let daysOfCalender = new Array(31)
 
     for (let i = 1; i <= daysOfCalender.length; i++) {
         let todoCounter = 0
-        todoList.forEach((todo) => {
-            if (todo.date == i) {
+        
+        for (const todo of todoList) {
+            if (todo.date.slice(-2) == i) {
                 todoCounter++
             }
-        })
+        }
 
         console.log(todoCounter)
 
         let calenderBox = createNewDivs(i, todoCounter)
-        let calenderGrid = document.querySelector('.calenderGrid')
-        console.log(calenderGrid)
+        
         calenderGrid.appendChild(calenderBox)
 
     }

@@ -1,13 +1,6 @@
 // ------- TODO --------- // 
-let todoList = ['dada']
-
-/**
- * Detta bör läggas i en funktion. 
- */
-let todo = {
-    date: 4,
-    text: "STÄÄÄÄDA"
-}
+let id = 0
+let todoList = []
 
 // Add ToDo w/ Enter
 document.onkeydown = function () {
@@ -15,13 +8,6 @@ document.onkeydown = function () {
         newToDoItem();
     }
 }
-
-
-// todoList.push(todo)
-
-
-// Input
-input = document.getElementById('input').value;
 
 
 // Load ToDo Items
@@ -42,35 +28,61 @@ function loadToDoItems(items) {
 
 // Add todo
 function newToDoItem() {
-
+    input = document.getElementById('input');
+    
     if (input.value == '') {
         alert('OOOOPS')
     } else {
-        todoList.push(input.value);
-        console.log(input.value);
+        let todo = {
+            id: id++,
+            date: "2019-12-04",
+            text: input.value
+        };
+        todoList.push(todo);
 
         let list = document.getElementById('list');
         let item = document.createElement('li');
-        let text = document.createElement('p')
-        item.innerHTML = "<i id='done' class='fa fa-check-circle done' aria-hidden='true'></i><i id='remove' onclick='removeToDoItem()' class='fa fa-times' aria-hidden='true'></i>";
-        text.appendChild(document.createTextNode(input.value));
-        item.appendChild(text);
-        list.appendChild(item);
+        item.id = todo.id
 
+        let text = document.createElement('span');
+        text.innerHTML = input.value;
+
+        let removeIcon = document.createElement('i');
+        removeIcon.className = 'fa fa-times';
+        removeIcon.onclick = removeToDoItem;
+
+        let checkIcon = document.createElement('i');
+        checkIcon.className = 'fa fa-check-circle done';
+        //checkIcon.onclick = removeToDoItem;//
+        
+        item.appendChild(checkIcon);
+        item.appendChild(text);
+        item.appendChild(removeIcon);
+        
+        list.appendChild(item);
         input.value = '';
+        
+        showCalender()
     }
 }
 
 
 
-function removeToDoItem() {
-    console.log('TAA BOOORT');
-    todoList.pop();
+function removeToDoItem(event) {
+    /** @type {HTMLElement} */
+    const removeIcon = event.target;
+    const liItem = removeIcon.closest('li');
+    liItem.parentElement.removeChild(liItem);
 
+    console.log(liItem.id);
+    for(let i = 0; i < todoList.length; i++){
 
-    //Update Array -> Update todoList
-    let list = document.getElementById('list');
-    let item = document.getElementById('item');
-     
+        if(todoList[i].id == liItem.id){
+            todoList.splice(i, 1)
+            break
+        }
 
+    }
+
+    showCalender()
 }

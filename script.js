@@ -8,5 +8,4 @@ function loadPage() {
     setInterval(time, 1000)
     // addTodoToKalender()
     loadToDoItems()
-
 }
