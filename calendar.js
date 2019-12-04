@@ -24,9 +24,12 @@ function showCalender() {
 }
 
 function createNewDivs(day, todosAmount) {
-    let newDay = document.createElement('div')
+    let newDay = document.createElement('div');
+   
     if (todosAmount != 0) {
         newDay.innerHTML = day + " " + todosAmount
+       
+
     } else {
         newDay.innerHTML = day
     }
