@@ -1,11 +1,72 @@
+@media screen and (min-width:620px) {
+
+    .hideDesktop {
+
+        display: none;
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width:650px) {
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+
+        height: 100vh;
+        overflow-x: scroll;
+
+    }
+
+    .calenderGrid {
+        display: none;
+    }
+
+    .date {
+
+        height: 50vh;
+    }
+
+    .dayOfTheWeek {
+
+        /* display: none; */
+    }
+
+    #day {
+        margin-right: 40px;
+    }
+
+    .toDo-list>ul>li {
+        font-size: 2rem;
+    }
+
+
+}
+
+
+/* SMALL DEVICES */
+
+
 @media screen and (max-width:320px) {
 
     .calenderGrid {
         display: none;
     }
 
-    .dayOfTheWeek{
-        display:none;
+    .dayOfTheWeek {
+        display: none;
     }
 
     main {
@@ -13,14 +74,14 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-        "month"
-        "date"
-        "todo"
-        "todo"
-        "todo"
-        "todo"
-        "todo"
-        "todo";
+            "month"
+            "date"
+            "todo"
+            "todo"
+            "todo"
+            "todo"
+            "todo"
+            "todo";
     }
 
     .month {
@@ -28,18 +89,18 @@
         font-size: 2rem;
     }
 
-    .date{
+    .date {
         grid-area: date;
         font-size: 1.5rem;
         border-bottom: 1px solid black;
-        margin:0;
+        margin: 0;
     }
 
-    .toDo-container{
-     grid-area: todo;
-     margin:0;
-    text-align: center;
-     
+    .toDo-container {
+        grid-area: todo;
+        margin: 0;
+        text-align: center;
+
     }
 
     #time {
@@ -47,7 +108,7 @@
     }
 
     .toDo-list {
-        margin:0;
+        margin: 0;
     }
 
 }
