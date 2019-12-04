@@ -1,5 +1,5 @@
 // ------- TODO --------- // 
-let todoList = []
+let todoList = ['dada']
 
 /**
  * Detta bör läggas i en funktion. 
@@ -28,11 +28,14 @@ input = document.getElementById('input').value;
 function loadToDoItems(items) {
 
     for (let i = 0; i < todoList.length; i++) {
-        console.log(i + ' element is ' + todoList[i]);
-        let ul = document.getElementById('list');
-        let li = document.createElement('li');
-        li.appendChild(document.createTextNode(todoList[i]));
-        ul.appendChild(li);
+    
+        let list = document.getElementById('list');
+        let item = document.createElement('li');
+        let text = document.createElement('p')
+        item.innerHTML = "<i id='done' class='fa fa-check-circle done' aria-hidden='true'></i><i id='remove' onclick='removeToDoItem()' class='fa fa-times' aria-hidden='true'></i>";
+        text.appendChild(document.createTextNode(todoList[i]));
+        item.appendChild(text);
+        list.appendChild(item);
     }
 }
 
@@ -46,10 +49,14 @@ function newToDoItem() {
         todoList.push(input.value);
         console.log(input.value);
 
-        let ul = document.getElementById('list');
-        let li = document.createElement('li');
-        li.appendChild(document.createTextNode(input.value));
-        ul.appendChild(li);
+        let list = document.getElementById('list');
+        let item = document.createElement('li');
+        let text = document.createElement('p')
+        item.innerHTML = "<i id='done' class='fa fa-check-circle done' aria-hidden='true'></i><i id='remove' onclick='removeToDoItem()' class='fa fa-times' aria-hidden='true'></i>";
+        text.appendChild(document.createTextNode(input.value));
+        item.appendChild(text);
+        list.appendChild(item);
+
         input.value = '';
     }
 }
@@ -59,10 +66,11 @@ function newToDoItem() {
 function removeToDoItem() {
     console.log('TAA BOOORT');
     todoList.pop();
+
+
+    //Update Array -> Update todoList
+    let list = document.getElementById('list');
+    let item = document.getElementById('item');
+     
+
 }
-
-
-
-
-
-
