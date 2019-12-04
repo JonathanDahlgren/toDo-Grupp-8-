@@ -28,14 +28,16 @@ function loadToDoItems(items) {
 
 // Add todo
 function newToDoItem() {
-    input = document.getElementById('input');
+    input = document.getElementById('text-input');
+    dateInput = document.getElementById('date-input');
+
     
     if (input.value == '') {
         alert('OOOOPS')
     } else {
         let todo = {
             id: id++,
-            date: "2019-12-04",
+            date: dateInput.value,
             text: input.value
         };
         todoList.push(todo);
@@ -60,8 +62,9 @@ function newToDoItem() {
         item.appendChild(removeIcon);
         
         list.appendChild(item);
+
         input.value = '';
-        
+        dateInput.value = '';
         showCalender()
     }
 }

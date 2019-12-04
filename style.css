@@ -97,13 +97,18 @@ order: 3;
     display: flex;
     justify-content: center;
 }
-.toDo-add>input {
+#text-input {
     width: 80%;
     height: 1.3rem;
     font-size: 1rem;
     margin: 10px;
  
     text-align: center;
+}
+
+
+#date-input {
+
 }
  
 .toDo-add>button {
