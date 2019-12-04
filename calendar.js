@@ -25,14 +25,23 @@ function showCalender() {
 
 function createNewDivs(day, todosAmount) {
     let newDay = document.createElement('div');
+    let todoNumber = document.createElement('p');
+
    
     if (todosAmount != 0) {
-        newDay.innerHTML = day + " " + todosAmount
-       
+        newDay.innerHTML = day // + " " + todosAmount
+        todoNumber.innerHTML = todosAmount
+        newDay.appendChild(todoNumber)
+
 
     } else {
         newDay.innerHTML = day
+
     }
     newDay.className = 'calenderBox'
+    todoNumber.className = 'todoNumber'
+
     return newDay
+    
+  
 }
