@@ -32,8 +32,12 @@ function newToDoItem() {
     dateInput = document.getElementById('date-input');
 
     
-    if (input.value == '') {
-        alert('OOOOPS')
+    if (input.value == ''){
+        alert('Write a todo in the "Add ToDo input field')
+    } else if (dateInput.value == '') {
+        alert('Choose a date for the ToDo')
+    } else if(dateInput.value > 31){
+        alert('Choose a date between 1-31 Dec')
     } else {
         let todo = {
             id: id++,
