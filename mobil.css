@@ -36,21 +36,32 @@
 
     .date {
 
-        height: 50vh;
+        height: 7rem;
+    }
+
+    #date {
+        justify-content: left;
     }
 
     .dayOfTheWeek {
 
-        /* display: none; */
+        display: none;
     }
 
     #day {
-        margin-right: 40px;
+        margin: 0;
+    }
+
+    #getDate {
+        margin: 0;
     }
 
     .toDo-list>ul>li {
         font-size: 2rem;
     }
+
+    
+
 
 
 }
@@ -82,6 +93,14 @@
             "todo"
             "todo"
             "todo";
+    }
+
+    .calender {
+        display: hidden;
+    }
+
+    .date {
+        height: 5rem;
     }
 
     .month {
