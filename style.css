@@ -97,8 +97,9 @@ order: 3;
     display: flex;
     justify-content: center;
 }
+
 #text-input {
-    width: 80%;
+    width: 60%;
     height: 1.3rem;
     font-size: 1rem;
     margin: 10px;
@@ -108,7 +109,10 @@ order: 3;
 
 
 #date-input {
-
+    width: 40%;
+    height: 1.3rem;
+    font-size: 1rem;
+    margin: 10px;
 }
  
 .toDo-add>button {
