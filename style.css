@@ -176,11 +176,14 @@ transition: all 0.4s ease-in-out;
 
 
 .todoNumber {
-    font-size: 1rem;
-    padding: 5px;
-    margin: 10px;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 3px;
+    margin-left: 3%;
+    margin-top: 1%;
     border-radius: 20px;
     color: white;
+
 
 }
 
