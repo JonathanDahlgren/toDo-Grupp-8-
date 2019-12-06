@@ -26,7 +26,7 @@
         flex-direction: column;
 
         height: 100vh;
-        overflow-x: scroll;
+       /* overflow-x: scroll;*/
 
     }
 
@@ -80,7 +80,7 @@
         display: none;
     }
 
-    main {
+    /*main {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
@@ -93,7 +93,7 @@
             "todo"
             "todo"
             "todo";
-    }
+    }*/
 
     .calender {
         display: hidden;
@@ -101,6 +101,7 @@
 
     .date {
         height: 5rem;
+        border:none;
     }
 
     .month {
@@ -119,7 +120,6 @@
         grid-area: todo;
         margin: 0;
         text-align: center;
-
     }
 
     #time {
