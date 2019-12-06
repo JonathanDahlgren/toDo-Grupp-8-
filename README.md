@@ -1,6 +1,8 @@
 # JavaScript Todo Calendar
 
-Kort beskrivning av projektet?
+Vi har gjort en karlender med todo funktion i java-script, css och HTML. Man kan lägga till en todo samt även ta bort en todo då försvinner den från listan. Man kan även bocka av en todo så den blir grön.
+Samt även vissar antalet todos i kaldenden. Vi har även tänkt på att göra kalendern så responsiv som möjligt då kalender försvinner när 
+man går i mobil storlek. Kalenden funkar bara för december år 2019 och inte framåt, dock uppdaterar månaden för varje ny månad.
 
 
 ## Titel 1
