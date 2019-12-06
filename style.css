@@ -93,6 +93,7 @@ main {
     height: 1.3rem;
     font-size: 1rem;
     margin: 10px;
+    display: flex;
  
     text-align: center;
 }
