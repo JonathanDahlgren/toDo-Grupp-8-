@@ -14,11 +14,11 @@ document.onkeydown = function () {
 function loadToDoItems(items) {
 
     for (let i = 0; i < todoList.length; i++) {
-    
+
         let list = document.getElementById('list');
         let item = document.createElement('li');
         let text = document.createElement('p')
-        item.innerHTML = "<i id='done' class='fa fa-check-circle done' aria-hidden='true'></i><i id='remove' onclick='removeToDoItem()' class='fa fa-times' aria-hidden='true'></i>";
+        item.innerHTML = "<i id='done' onclick='checkToDoItem()' class='fa fa-check-circle done' aria-hidden='true'></i><i id='remove' onclick='removeToDoItem()' class='fa fa-times' aria-hidden='true'></i>";
         text.appendChild(document.createTextNode(todoList[i]));
         item.appendChild(text);
         list.appendChild(item);
@@ -31,12 +31,12 @@ function newToDoItem() {
     input = document.getElementById('text-input');
     dateInput = document.getElementById('date-input');
 
-    
-    if (input.value == ''){
+
+    if (input.value == '') {
         alert('Write a todo in the "Add ToDo input field')
     } else if (dateInput.value == '') {
         alert('Choose a date for the ToDo')
-    } else if(dateInput.value > 31){
+    } else if (dateInput.value > 31) {
         alert('Choose a date between 1-31 Dec')
     } else {
         let todo = {
@@ -51,20 +51,20 @@ function newToDoItem() {
         item.id = todo.id
 
         let text = document.createElement('span');
-        text.innerHTML = input.value;
+        text.innerHTML = input.value + " " + "- " + dateInput.value;
 
         let removeIcon = document.createElement('i');
-        removeIcon.className = 'fa fa-times';
+        removeIcon.className = 'fa fa-times remove';
         removeIcon.onclick = removeToDoItem;
 
         let checkIcon = document.createElement('i');
         checkIcon.className = 'fa fa-check-circle done';
-        //checkIcon.onclick = removeToDoItem;//
-        
+        checkIcon.onclick = checkToDoItem;
+
         item.appendChild(checkIcon);
         item.appendChild(text);
         item.appendChild(removeIcon);
-        
+
         list.appendChild(item);
 
         input.value = '';
@@ -82,9 +82,9 @@ function removeToDoItem(event) {
     liItem.parentElement.removeChild(liItem);
 
     console.log(liItem.id);
-    for(let i = 0; i < todoList.length; i++){
+    for (let i = 0; i < todoList.length; i++) {
 
-        if(todoList[i].id == liItem.id){
+        if (todoList[i].id == liItem.id) {
             todoList.splice(i, 1)
             break
         }
@@ -92,4 +92,29 @@ function removeToDoItem(event) {
     }
 
     showCalender()
+}
+
+
+
+
+function checkToDoItem(event) {
+
+    const checkIcon = event.target;
+
+
+    const liItem = checkIcon.closest('li')
+
+    if (liItem.style.background === "none") {
+
+        liItem.style.background = "rgba(0, 0, 0, 0.5)";
+       
+        checkIcon.style.color = "green";
+
+    } else {
+        liItem.style.background = "none"
+
+     
+        checkIcon.style.color = "black";
+    }
+
 }
