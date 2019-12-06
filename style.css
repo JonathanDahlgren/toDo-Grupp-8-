@@ -72,24 +72,33 @@ border-top: 1px solid black;
     list-style-type: none;
     margin: 5px;
     padding: 0px 8px 0px 8px;
-
+    background: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 1s ease-in-out;
 
 
 }
 
-.toDo-list>ul>li>p {
-    order: 2;
-}
 
-#done{
+.toDo-list>ul>li>i {
+    transition: all 1s ease-in-out;
+}
+/* #done{
 order: 1;
 }
 
 #remove {
 order: 3;
+} */
+
+.done:hover  {
+}
+
+.remove:hover {
+    color: red;
+    transform: rotate(90deg);
 }
 
 .toDo-add {
