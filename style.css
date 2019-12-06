@@ -1,65 +1,57 @@
 * { 
-margin: 0;
-padding: 0;
-font-family: 'Alatsi', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Alatsi', sans-serif;
 }
 
 
 main {
-height: 100vh;
-background-image: linear-gradient(to right bottom, #7ba6ca, #4f82b8, #285ea4, #09398c, #05116f);
-display: grid;
-grid-template-columns: repeat(9, 1fr);
-grid-template-rows: repeat(6, 1fr);
-grid-template-areas: 
-"date date month month month month month month month"
-"toDo toDo calendar calendar calendar calendar calendar calendar calendar"
-"toDo toDo calendar calendar calendar calendar calendar calendar calendar"
-"toDo toDo calendar calendar calendar calendar calendar calendar calendar"
-"toDo toDo calendar calendar calendar calendar calendar calendar calendar"
-"toDo toDo calendar calendar calendar calendar calendar calendar calendar"
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, #7ba6ca, #4f82b8, #285ea4, #09398c, #05116f);
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "date date month month month month month month month"
+    "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
+    "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
+    "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
+    "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
+    "toDo toDo calendar calendar calendar calendar calendar calendar calendar"
 ;
 }
 
 .month {
-grid-area: month;
-justify-content: left;
-display: flex;
-font-size: 2rem;
-margin-top: 2rem;
-margin-left: 1rem;
+    grid-area: month;
+    justify-content: left;
+    display: flex;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 
 
 .date {
-border: 1px solid black;
-border-bottom: none;
-grid-area: date;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-display: flex;
-font-size: 2rem;
+    border: 1px solid black;
+    border-bottom: none;
+    grid-area: date;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
 }
 
 .date p{
-margin-right: 1rem;
+    margin-right: 1rem;
 }
 
-.toDo {
-grid-area: toDo;
-border-bottom: 1px solid black;
-border-right: 1px solid black;
-border-top: 1px solid black;
-
-}
 
 .toDo-container {
     grid-area: toDo;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-
     overflow-y: scroll;
 }
  
@@ -81,19 +73,8 @@ border-top: 1px solid black;
 
 }
 
-
 .toDo-list>ul>li>i {
     transition: all 1s ease-in-out;
-}
-/* #done{
-order: 1;
-}
-
-#remove {
-order: 3;
-} */
-
-.done:hover  {
 }
 
 .remove:hover {
@@ -129,59 +110,47 @@ order: 3;
     text-align: center;
     background: none;
     font-size: 2rem;
-
-border: none;
-
+    border: none;
 }
-
-
 
 .calendar {
-grid-area: calendar;
-padding-right: 40px;
-
+    grid-area: calendar;
+    padding-right: 40px;
 }
 
+/*Kalendergriden i den stora griden*/
 .calenderGrid {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: repeat(5, 14vh);
-
-grid-gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 14vh);
+    grid-gap: 5px;
 }
 
 .dayOfTheWeek{
-display:flex;
-justify-content: space-around;
+    display:flex;
+    justify-content: space-around;
 }
 
-.calenderBox{
-display:flex;
-justify-content: center;
-align-items:center;
-font-size: 2rem;
-border: 2px solid black;
-
-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-padding: 10px;
-font-weight: 100;
-
-transition: all 0.4s ease-in-out;
-
+/*Divar som skapas när arrayen på 31 platser gås igenom */
+.calenderDivs{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 2rem;
+    border: 2px solid black;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    font-weight: 100;
+    transition: all 0.4s ease-in-out;
 }
 
-.calenderBox:hover {
-
+.calenderDivs:hover {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, .9);
     padding: 10px;
     font-size: 2.1rem;
     font-weight: 900;
     transition: all 0.3s ease-in-out;
-    
-
-
 }
-
 
 .todoNumber {
     position: absolute;
@@ -191,29 +160,19 @@ transition: all 0.4s ease-in-out;
     margin-top: 1%;
     border-radius: 20px;
     color: white;
-
-
 }
 
 #time{
 font-size: 1.5rem;
-
 }
 
-
 /* Scrollbar */ 
-
 ::-webkit-scrollbar {
     width: 1px;
-  }
+}
 
-  ::-webkit-scrollbar-track {
-  
+::-webkit-scrollbar-track {
     background: black;
-  }
+}
   
-  /* ::-webkit-scrollbar-thumb {
-    background: rgba(40, 85, 208, 0.619);
-    border-radius: 10px;
-  }  */
 

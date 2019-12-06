@@ -2,31 +2,14 @@
 let id = 0
 let todoList = []
 
-// Add ToDo w/ Enter
+// Lägga till ToDo w/ Enter
 document.onkeydown = function () {
     if (window.event.keyCode == '13') {
         newToDoItem();
     }
 }
 
-
-// Load ToDo Items
-function loadToDoItems(items) {
-
-    for (let i = 0; i < todoList.length; i++) {
-
-        let list = document.getElementById('list');
-        let item = document.createElement('li');
-        let text = document.createElement('p')
-        item.innerHTML = "<i id='done' onclick='checkToDoItem()' class='fa fa-check-circle done' aria-hidden='true'></i><i id='remove' onclick='removeToDoItem()' class='fa fa-times' aria-hidden='true'></i>";
-        text.appendChild(document.createTextNode(todoList[i]));
-        item.appendChild(text);
-        list.appendChild(item);
-    }
-}
-
-
-// Add todo
+// Lägga till todo
 function newToDoItem() {
     input = document.getElementById('text-input');
     dateInput = document.getElementById('date-input');
@@ -94,14 +77,9 @@ function removeToDoItem(event) {
     showCalender()
 }
 
-
-
-
 function checkToDoItem(event) {
 
     const checkIcon = event.target;
-
-
     const liItem = checkIcon.closest('li')
 
     if (liItem.style.background === "none") {

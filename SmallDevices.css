@@ -1,22 +1,10 @@
 @media screen and (min-width:620px) {
 
     .hideDesktop {
-
         display: none;
 
     }
-
-
-
-
-
-
 }
-
-
-
-
-
 
 @media screen and (max-width:650px) {
 
@@ -24,10 +12,7 @@
 
         display: flex;
         flex-direction: column;
-
         height: 100vh;
-       /* overflow-x: scroll;*/
-
     }
 
     .calenderGrid {
@@ -35,7 +20,6 @@
     }
 
     .date {
-
         height: 7rem;
     }
 
@@ -44,7 +28,6 @@
     }
 
     .dayOfTheWeek {
-
         display: none;
     }
 
@@ -59,16 +42,9 @@
     .toDo-list>ul>li {
         font-size: 2rem;
     }
-
-    
-
-
-
 }
 
-
 /* SMALL DEVICES */
-
 
 @media screen and (max-width:320px) {
 
@@ -79,21 +55,6 @@
     .dayOfTheWeek {
         display: none;
     }
-
-    /*main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-areas:
-            "month"
-            "date"
-            "todo"
-            "todo"
-            "todo"
-            "todo"
-            "todo"
-            "todo";
-    }*/
 
     .calender {
         display: hidden;

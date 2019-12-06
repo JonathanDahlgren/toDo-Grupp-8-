@@ -6,6 +6,5 @@ function loadPage() {
     showDate()
     time()
     setInterval(time, 1000)
-    // addTodoToKalender()
     loadToDoItems()
 }

@@ -1,4 +1,4 @@
-
+// ------- DAG + MÅNAD + TID --------- // 
 function showDate() {
 
     var d = new Date()

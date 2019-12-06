@@ -1,5 +1,5 @@
 
-
+// ------- KALENDER --------- // 
 function showCalender() {
     let calenderGrid = document.querySelector('.calenderGrid')
     calenderGrid.innerHTML = ""
@@ -16,12 +16,13 @@ function showCalender() {
 
         console.log(todoCounter)
 
-        let calenderBox = createNewDivs(i, todoCounter)
+        let calenderDivs = createNewDivs(i, todoCounter)
         
-        calenderGrid.appendChild(calenderBox)
+        calenderGrid.appendChild(calenderDivs)
 
     }
 }
+
 
 function createNewDivs(day, todosAmount) {
     let newDay = document.createElement('div');
@@ -38,7 +39,7 @@ function createNewDivs(day, todosAmount) {
         newDay.innerHTML = day
 
     }
-    newDay.className = 'calenderBox'
+    newDay.className = 'calenderDivs'
     todoNumber.className = 'todoNumber'
 
     return newDay
